@@ -34,7 +34,7 @@ Language : IT | Long : Italian
 };
  
 print color 'reset';
-@iphost=$ARGV[0] || die "Usare: perl iplocation.pl [host] [ip] [dominio]\nEsempio: perl iplocation.pl  www.google.com [Oppure inserire un ip]\n";
+@iphost=$ARGV[0] || die "Usare: perl iptracker.pl [host] [ip] [dominio]\nEsempio: perl iptracker.pl www.google.com [Oppure inserire un ip]\n";
 my @ip = inet_ntoa(scalar gethostbyname("@iphost")or die "IP o Host invalido!\n");
 my @hn = scalar gethostbyaddr(inet_aton(@ip),AF_INET);
  
